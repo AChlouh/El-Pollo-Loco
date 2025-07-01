@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-fullscreen">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="style.css">
+    <title>El Pollo Loco</title>
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/chicken.class.js"></script>
+    <script src="models/little.chicken.class.js"></script>
+    <script src="models/cloud.class.js"></script>
+    <script src="models/status-bar.class.js"></script>
+    <script src="models/status-coin.class.js"></script>
+    <script src="models/coin.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/collect-object.class.js"></script>
+    <script src="models/status-bottle.class.js"></script>
+    <script src="models/statusbar-endboss.class.js"></script>
+    <script src="models/bottles.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script src="js/game.js"></script>
+</head>
+
+<body>
+    <div class="startscreen" id="startscreenID">
+        <div class="button">
+            <button onclick="init()">Start</button>
+        </div>
+        <img src="img/9_intro_outro_screens/start/startscreen_1.png" alt="">
+    </div>
+
+    <div id="gameOver" class="gameOver">
+        <img class="gameOverpicture" src="img/9_intro_outro_screens/game_over/game over!.png" alt="">
+        <div class="gameOverbtn">
+            <button onclick="replay()">Replay</button>
+            <button onclick="reload()">Home</button>
+        </div>
+    </div>
+
+    <div id="winner" class="gameOver" style="display:none">
+        <img class="gameOverpicture" src="img/9_intro_outro_screens/win/win_2.png" alt="">
+        <div class="gameOverbtn">
+            <button onclick="replay()">Replay</button>
+            <button onclick="reload()">Home</button>
+        </div>
+    </div>
+
+    <h1>El Pollo Loco</h1>
+
+    <div style="position: relative; width: fit-content; margin: 0 auto;">
+        <canvas id="canvas" width="750" height="480"></canvas>
+        <div class="counter-container in-canvas">
+            <div class="counter">
+                <img src="img/8_coin/coin_1.png" alt="Coin" class="counter-icon">
+                <span id="coinCount">0</span>
+            </div>
+            <div class="counter">
+                <img src="img/6_salsa_bottle/salsa_bottle.png" alt="Bottle" class="counter-icon">
+                <span id="bottleCount">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div id="hud" class="backround-cover"></div>
+    </div>
+
+    <div class="play-keys">
+        <h2>&#8592; = LEFT</h2>
+        <h2>&#8594; = RIGHT</h2>
+        <h2> SPACE = JUMP</h2>
+        <h2>D = THROW</h2>
+    </div>
+</body>
+
+</html>
